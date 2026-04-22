@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-    baseURL: 'https://farm-97ds.onrender.com/',
+    baseURL: 'https://farm-97ds.onrender.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
