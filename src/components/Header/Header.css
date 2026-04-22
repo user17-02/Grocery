@@ -1,0 +1,681 @@
+/* ============================================
+   HEADER - BASE (DESKTOP)
+   ============================================ */
+
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 110px;
+    position: relative;
+}
+
+
+
+/* ---- Logo ---- */
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    max-height: 90px;
+    width: auto;
+    max-width: 300px;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+/* ---- Desktop Nav ---- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu > ul {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > ul > li {
+    position: relative;
+}
+
+.nav-menu > ul > li > a,
+.nav-menu > ul > li > .mobile-nav-link > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-menu > ul > li > a:hover,
+.nav-menu > ul > li:hover > .mobile-nav-link > a {
+    color: #e8725c;
+    background: #fff5f3;
+}
+
+.nav-menu > ul > li.active > a {
+    color: #e8725c;
+}
+
+/* Chevron in desktop links */
+.nav-menu > ul > li > a > svg,
+.nav-menu > ul > li > .mobile-nav-link > a > svg {
+    font-size: 13px;
+    margin-top: 1px;
+    transition: transform 0.25s ease;
+}
+.nav-menu > ul > li:hover > a > svg {
+    transform: rotate(180deg);
+}
+
+/* ---- Desktop Dropdown ---- */
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown > .dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    border-top: 3px solid #e8725c;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 500;
+}
+
+.has-dropdown:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s, padding-left 0.2s;
+}
+
+.dropdown li a:hover {
+    color: #e8725c;
+    background: #fff8f7;
+    padding-left: 26px;
+}
+
+.divider-dropdown {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 8px 0;
+}
+
+/* ---- Header Actions ---- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 10;
+}
+
+
+.account-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.account-links a {
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.account-links a:hover {
+    color: #e8725c;
+}
+
+.account-links .divider {
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* ---- Icons (Wishlist / Cart) ---- */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-wishlist,
+.header-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-wishlist {
+    font-size: 22px;
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-wishlist:hover { color: #e8725c; }
+
+.header-cart a {
+    font-size: 22px;
+    color: #2d2d2d;
+    display: flex;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-cart a:hover { color: #e8725c; }
+
+.badge,
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #2d2d2d;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.header-wishlist:hover .badge,
+.header-cart:hover .cart-badge {
+    background: #e8725c;
+}
+
+/* ---- User Dropdown ---- */
+.user-dropdown {
+    position: relative;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d2d2d;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.user-name:hover {
+    background: #f5f5f5;
+}
+
+.user-dropdown-content {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    min-width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+    z-index: 600;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-dropdown-content a,
+.user-dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+}
+
+.user-dropdown-content a:hover,
+.user-dropdown-content button:hover {
+    background: #fff8f7;
+    color: #e8725c;
+}
+
+/* ---- Mobile Toggle (hamburger) ---- */
+.mobile-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2d2d2d;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    z-index: 1100;
+}
+
+
+.mobile-toggle:hover {
+    background: #f5f5f5;
+}
+
+/* Hide mobile-only elements on desktop */
+.mobile-close-btn,
+.dropdown-toggle-circle,
+.mobile-only-links {
+    display: none;
+}
+
+/* Mobile nav wrapper - wrapper for link + toggle circle */
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ---- Overlay ---- */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1150;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET & MOBILE (≤ 991px)
+   ============================================ */
+@media (max-width: 991px) {
+
+    .header-container {
+        padding: 0 20px;
+        height: 90px;
+    }
+
+
+
+    /* Show hamburger */
+    .mobile-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    /* Show overlay */
+    .menu-overlay {
+        display: block;
+    }
+
+    /* ---- Sidebar ---- */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        z-index: 1200;
+        transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        box-shadow: none;
+    }
+
+    .main-header .nav-menu.active {
+        left: 0 !important;
+        visibility: visible !important;
+        box-shadow: 10px 0 40px rgba(0,0,0,0.15);
+    }
+
+
+
+    /* ---- Sidebar Header (brand bar) ---- */
+    .nav-menu::before {
+        content: 'Menu';
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 0 24px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #fff;
+        background: #e8725c;
+        flex-shrink: 0;
+    }
+
+    /* ---- Close Button ---- */
+    .mobile-close-btn {
+        display: flex !important;
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.25);
+        border: 1px solid rgba(255,255,255,0.4);
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10;
+        transition: background 0.2s;
+    }
+
+    .mobile-close-btn:hover {
+        background: rgba(255,255,255,0.4);
+    }
+
+    /* ---- Nav List ---- */
+    .nav-menu > ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 0 24px;
+        overflow-y: auto;
+        height: calc(100vh - 60px);
+    }
+
+    /* ---- Nav Items ---- */
+    .nav-menu > ul > li {
+        border-bottom: 1px solid #f3f3f3;
+    }
+
+    .nav-menu > ul > li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu > ul > li > a,
+    .nav-menu > ul > li > .mobile-nav-link > a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a1a1a;
+        border-radius: 0;
+        background: none;
+        letter-spacing: 0;
+    }
+
+    .nav-menu > ul > li > a:hover,
+    .nav-menu > ul > li > .mobile-nav-link > a:hover {
+        color: #e8725c;
+        background: #fff8f7;
+    }
+
+    .nav-menu > ul > li.active > a {
+        color: #e8725c;
+        background: #fff5f3;
+    }
+
+    /* ---- Mobile Nav Link Row ---- */
+    .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-nav-link > a {
+        flex: 1;
+    }
+
+    /* ---- Dropdown Toggle Circle ---- */
+    .dropdown-toggle-circle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        margin-right: 16px;
+        border-radius: 50%;
+        background: #f5f5f5;
+        border: none;
+        color: #888;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, transform 0.25s;
+    }
+
+    .has-dropdown.open .dropdown-toggle-circle {
+        background: #ffe8e3;
+        color: #e8725c;
+        transform: rotate(180deg);
+    }
+
+    /* ---- Accordion Dropdown (collapsed by default) ---- */
+    .has-dropdown > .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-radius: 0;
+        background: #fafafa;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        min-width: 100%;
+    }
+
+    /* Desktop hover rule should not apply on mobile */
+    .has-dropdown:hover > .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0; /* stays closed unless .open is set */
+    }
+
+    .has-dropdown.open > .dropdown {
+        max-height: 600px;
+    }
+
+    .dropdown li {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown li:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown li a {
+        padding: 12px 24px 12px 36px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+        background: none;
+    }
+
+    .dropdown li a:hover {
+        color: #e8725c;
+        background: #fff8f7;
+        padding-left: 40px;
+    }
+
+    /* ---- Chevron in link text — hide on mobile ---- */
+    .nav-menu > ul > li > a > svg {
+        display: none;
+    }
+
+    /* ---- Mobile Account Links ---- */
+    .mobile-only-links {
+        display: block !important;
+        border-top: 2px solid #f0f0f0;
+        margin-top: 8px;
+        padding: 16px 24px;
+    }
+
+    .mobile-user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a1a;
+        padding: 8px 0 14px;
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 10px;
+    }
+
+    .mobile-user-info span {
+        color: #e8725c;
+    }
+
+    .mobile-only-links a {
+        display: block;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .mobile-only-links a:hover {
+        color: #e8725c;
+    }
+
+    .mobile-logout {
+        display: block;
+        width: auto;
+        margin-top: 12px;
+        padding: 10px 0;
+        border: none;
+        background: none;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        color: #e74c3c;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .mobile-auth-links {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    /* Hide desktop-only account links */
+    .account-links {
+        display: none;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 16px;
+        height: 80px;
+    }
+
+
+
+    .logo {
+        width: auto;
+    }
+
+    .logo img {
+        max-height: 65px;
+    }
+
+
+
+    .header-icons {
+        gap: 14px;
+    }
+
+    .header-wishlist,
+    .header-cart a {
+        font-size: 20px;
+    }
+}

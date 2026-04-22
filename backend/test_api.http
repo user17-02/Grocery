@@ -1,0 +1,56 @@
+### User Routes
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Jane User",
+    "email": "jane@example.com",
+    "password": "password123"
+}
+
+### Login User
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "password123"
+}
+
+### Get Products
+GET http://localhost:5000/api/products
+
+### Get Categories
+GET http://localhost:5000/api/categories
+
+### Create Order (Need Token)
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer <YOUR_TOKEN_HERE>
+
+{
+    "orderItems": [
+        {
+            "product": "64e...",
+            "name": "Apple",
+            "qty": 2,
+            "image": "/images/apple.jpg",
+            "price": 2.99
+        }
+    ],
+    "shippingAddress": {
+        "address": "123 Main St",
+        "city": "New York",
+        "postalCode": "10001",
+        "country": "USA"
+    },
+    "paymentMethod": "PayPal",
+    "itemsPrice": 5.98,
+    "taxPrice": 0.50,
+    "shippingPrice": 0.00,
+    "totalPrice": 6.48
+}
+
+### Get Admin Stats (Need Admin Token)
+GET http://localhost:5000/api/admin/stats
+Authorization: Bearer <YOUR_ADMIN_TOKEN_HERE>

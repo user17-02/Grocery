@@ -1,0 +1,40 @@
+.brand-logos-section {
+    background-color: #fff;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logos-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-item {
+    text-align: center;
+    transition: var(--transition);
+}
+
+.logo-item img {
+    max-width: 140px;
+    height: auto;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.logo-item:hover img {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .logos-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .logo-item img {
+        max-width: 110px;
+    }
+}

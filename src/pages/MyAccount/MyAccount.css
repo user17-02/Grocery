@@ -1,0 +1,228 @@
+.my-account-page {
+    background-color: #fff;
+    text-align: left;
+}
+
+.my-account-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Sidebar Styling */
+.account-sidebar {
+    flex: 3;
+}
+
+.account-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.account-tabs li {
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.account-tabs li:last-child {
+    border-bottom: none;
+}
+
+.account-tabs li svg {
+    font-size: 18px;
+    color: #999;
+}
+
+.account-tabs li:hover,
+.account-tabs li.active {
+    background-color: #e99285;
+    color: #fff;
+    border-color: #e99285;
+}
+
+.account-tabs li:hover svg,
+.account-tabs li.active svg {
+    color: #fff;
+}
+
+.account-tabs li a {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Content Styling */
+.account-content {
+    flex: 9;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.tab-pane h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.tab-pane p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.logout-link {
+    color: #e99285;
+    font-weight: 700;
+}
+
+/* Account Tables */
+.account-table-wrapper {
+    overflow-x: auto;
+}
+
+.account-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.account-table th {
+    background-color: #f6f6f6;
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    border: 1px solid #ebebeb;
+}
+
+.account-table td {
+    padding: 15px;
+    border: 1px solid #ebebeb;
+    font-size: 14px;
+    color: #444;
+}
+
+.view-btn {
+    color: #e99285;
+    font-weight: 700;
+}
+
+/* Address Box */
+.address-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.address-box p {
+    margin-bottom: 5px;
+}
+
+.edit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #e99285;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Form Styling */
+.account-details-form .form-group {
+    margin-bottom: 20px;
+}
+
+.account-details-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.account-details-form .form-row .form-group {
+    flex: 1;
+}
+
+.account-details-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.account-details-form input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ebebeb;
+    padding: 0 15px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.account-details-form fieldset {
+    border: 1px solid #ebebeb;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.account-details-form legend {
+    font-weight: 700;
+    padding: 0 10px;
+    color: #222;
+}
+
+.save-btn {
+    background-color: #111;
+    color: #fff;
+    padding: 12px 35px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.save-btn:hover {
+    background-color: #e99285;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .my-account-wrapper {
+        flex-direction: column;
+    }
+
+    .account-sidebar,
+    .account-content {
+        width: 100%;
+    }
+
+    .account-content {
+        margin-top: 30px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .account-details-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

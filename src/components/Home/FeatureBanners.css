@@ -1,0 +1,36 @@
+.feature-banners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.banner-item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.banner-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .feature-banners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-banners-grid {
+        grid-template-columns: 1fr;
+    }
+}

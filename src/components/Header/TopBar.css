@@ -1,0 +1,80 @@
+.top-bar {
+    background-color: #f39c8e;
+    /* Coral color from image */
+    color: #fff;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.offer-text {
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shop-now-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 2px 20px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background: #fff;
+    color: #f39c8e;
+}
+
+.top-bar-close {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.top-bar-close:hover {
+    opacity: 1;
+}
+
+/* Responsive TopBar */
+@media (max-width: 768px) {
+    .offer-text {
+        font-size: 13px;
+        gap: 10px;
+    }
+    
+    .shop-now-btn {
+        padding: 2px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-text {
+        font-size: 11px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding-right: 30px; /* Space for close button */
+    }
+
+    .shop-now-btn {
+        padding: 1px 8px;
+        font-size: 11px;
+    }
+}

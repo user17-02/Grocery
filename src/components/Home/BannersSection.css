@@ -1,0 +1,75 @@
+.banners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.banner-item {
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.banner-item:hover {
+    transform: scale(1.02);
+}
+
+.secondary-banner {
+    background-color: #fbede3;
+}
+
+.primary-banner {
+    background-color: #e6f3ef;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-content .subtitle {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.banner-content h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.banner-content p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.btn-shop {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-shop:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .banners-grid {
+        grid-template-columns: 1fr;
+    }
+}

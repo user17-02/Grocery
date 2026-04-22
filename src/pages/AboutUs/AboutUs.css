@@ -1,0 +1,283 @@
+.breadcrumb-section {
+    background: url('../../assets/1-1 (2).webp') no-repeat center center;
+    background-size: cover;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.breadcrumb-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    text-transform: capitalize;
+}
+
+.breadcrumb-content nav {
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.breadcrumb-content nav a {
+    color: #222;
+    transition: var(--transition);
+}
+
+.breadcrumb-content nav a:hover {
+    color: #f39c8e;
+}
+
+.breadcrumb-content nav span {
+    color: #666;
+    font-weight: 400;
+}
+
+/* Fruit Importance */
+.fruit-importance-section {
+    background-color: #fff;
+}
+
+.fruit-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.fruit-content {
+    flex: 1;
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.fruit-content p {
+    margin-bottom: 25px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.fruit-video {
+    flex: 1;
+}
+
+.video-thumb {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-thumb img {
+    width: 100%;
+    display: block;
+    transition: var(--transition);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(243, 156, 142, 0.8);
+    /* Obrien coral color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #fff;
+    margin-left: 5px;
+}
+
+.video-thumb:hover .play-button {
+    background: #f39c8e;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-thumb:hover img {
+    transform: scale(1.05);
+}
+
+/* Dynamic Team */
+.team-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.team-image {
+    flex: 1;
+}
+
+.team-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.team-content {
+    flex: 1;
+}
+
+.team-content .subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f39c8e;
+    margin-bottom: 25px;
+}
+
+.content-body p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Why Choose Us */
+.why-choose-section {
+    background-color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-header {
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: #f6f6f6;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    font-size: 40px;
+    color: #f39c8e;
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Our Team */
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.member-card {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f6f6f6;
+    transition: var(--transition);
+}
+
+.member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.member-info span {
+    font-size: 14px;
+    color: #f39c8e;
+    font-weight: 600;
+}
+
+.member-card:hover {
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-card:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+
+    .team-grid,
+    .fruit-grid {
+        flex-direction: column;
+    }
+
+    .features-grid,
+    .team-members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .features-grid,
+    .team-members-grid {
+        grid-template-columns: 1fr;
+    }
+}

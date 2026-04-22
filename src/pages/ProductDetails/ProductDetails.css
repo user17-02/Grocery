@@ -1,0 +1,381 @@
+.product-details-page {
+    background-color: #ffffff;
+}
+
+.product-shop-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.product-gallery {
+    flex: 1;
+}
+
+.main-image-wrapper {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-product-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.main-product-image:hover {
+    transform: scale(1.05);
+}
+
+.product-shop-content {
+    flex: 1;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.product-rating svg {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.product-rating svg.filled {
+    color: #f39c8e;
+}
+
+.review-count {
+    font-size: 14px;
+    color: #666;
+    margin-left: 10px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.current-price {
+    color: #111;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.short-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.product-actions-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.quantity-selector button {
+    background: #f6f6f6;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.quantity-selector button:hover {
+    background: #ebebeb;
+}
+
+.quantity-selector input {
+    width: 60px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    font-weight: 600;
+}
+
+.add-to-cart-btn {
+    background-color: #ffaa2b;
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #333;
+}
+
+.secondary-actions {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.action-link {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.action-link:hover {
+    color: #f39c8e;
+}
+
+.buy-it-now-btn {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-it-now-btn:hover {
+    background-color: #ffaa2b;
+}
+
+.product-meta p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.product-meta strong {
+    color: #222;
+}
+
+.product-meta a {
+    color: #666;
+    text-decoration: none;
+}
+
+.product-meta a:hover {
+    color: #ffaa2b;
+}
+
+.share-links {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+
+.share-links a {
+    color: #666;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.share-links a:hover {
+    color: #ffaa2b;
+}
+
+/* Tabs Section */
+.product-info-tabs {
+    border-top: 1px solid #ebebeb;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 40px;
+}
+
+.tabs-header button {
+    background: none;
+    border: none;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tabs-header button.active {
+    color: #222;
+}
+
+.tabs-header button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffaa2b;
+}
+
+.tab-content {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tab-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tab-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #666;
+}
+
+.tab-content ul li {
+    margin-bottom: 10px;
+}
+
+.review-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.review-item h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.review-form {
+    margin-top: 40px;
+}
+
+.rating-input {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    height: 150px;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row input {
+    flex: 1;
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    outline: none;
+}
+
+.submit-review-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-review-btn:hover {
+    background-color: #ffaa2b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .product-shop-wrapper {
+        flex-direction: column;
+    }
+
+    .tabs-header {
+        gap: 20px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .tabs-header button {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+}

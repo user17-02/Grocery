@@ -1,0 +1,32 @@
+.order-success-page .success-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-success-page .success-icon {
+    line-height: 1;
+}
+
+.order-success-page h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.order-success-page p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.order-success-page .success-actions .update-cart-btn,
+.order-success-page .success-actions .checkout-btn {
+    padding: 15px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.order-success-page .success-actions .update-cart-btn:hover {
+    background-color: #333;
+    color: #fff;
+}

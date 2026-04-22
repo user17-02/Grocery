@@ -1,0 +1,49 @@
+.fruit-importance-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.fruit-importance-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.fruit-importance-content .section-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #222;
+    font-family: var(--font-main);
+}
+
+.fruit-importance-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.fruit-importance-image {
+    flex: 1.2;
+}
+
+.fruit-importance-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+    .fruit-importance-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fruit-importance-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}

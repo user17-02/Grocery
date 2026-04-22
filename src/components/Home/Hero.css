@@ -1,0 +1,188 @@
+.hero {
+    background-color: #e8e3d2;
+    /* Exact beige background */
+    background-position: center right, center center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover, cover;
+    /* Ensure full banner coverage */
+    padding: 180px 0;
+    position: relative;
+    overflow: hidden;
+    color: #222;
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* More realistic background sketches */
+/* The ::before pseudo-element is no longer needed as its functionality is merged into .hero */
+
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    /* Wider container for one line title */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero-content {
+    flex: 2;
+    /* Take more space for the title */
+    max-width: 850px;
+}
+
+.hero-content .subtitle {
+    color: #222;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+    display: block;
+    font-family: var(--font-main);
+    letter-spacing: -0.5px;
+}
+
+.hero-content .title {
+    font-size: 115px;
+    /* Maximum impact */
+    line-height: 0.85;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: #111;
+    white-space: nowrap;
+    /* CRITICAL: Force one line */
+    letter-spacing: -5px;
+    /* Condensed feel */
+    font-family: var(--font-main);
+    display: block;
+}
+
+.btn-shop-now {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 60px;
+    border-radius: 60px;
+    border: none;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-shop-now:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Image removed from JSX, handled via background-image */
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Very subtle arrows */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 32px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.arrow-left {
+    left: 40px;
+}
+
+.arrow-right {
+    right: 40px;
+}
+
+.slider-pagination {
+    position: absolute;
+    bottom: 80px;
+    right: 12%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.pagination-line {
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    /* Static white line */
+    transition: all 0.3s ease;
+}
+
+.pagination-line.active {
+    background-color: #ff6b6b;
+    /* Red line for active */
+    width: 65px;
+}
+
+/* Remove old waves completely */
+.hero-waves-container {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .hero-content .title {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-image-wrap {
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .slider-arrow {
+        display: none;
+    }
+}

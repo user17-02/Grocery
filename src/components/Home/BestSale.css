@@ -1,0 +1,43 @@
+.best-sale {
+    background-color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header .section-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.section-header .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.best-sale-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 1200px) {
+    .best-sale-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .best-sale-grid {
+        grid-template-columns: 1fr;
+    }
+}

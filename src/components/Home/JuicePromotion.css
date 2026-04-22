@@ -1,0 +1,40 @@
+.juice-promotion {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.juice-promo-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.juice-promo-image {
+    margin-bottom: 50px;
+}
+
+.juice-promo-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.juice-promo-text p {
+    font-size: 20px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.juice-promo-text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .juice-promo-text p {
+        font-size: 18px;
+    }
+}

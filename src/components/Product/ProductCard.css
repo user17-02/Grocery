@@ -1,0 +1,175 @@
+.product-card {
+    background: #fff;
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.product-image-box {
+    background-color: #f7f7f7;
+    /* Matching reference image background */
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.product-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image-box img {
+    transform: scale(1.1);
+}
+
+.placeholder-product-img {
+    color: #ddd;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.soldout-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #222;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.product-actions {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover .product-actions {
+    right: 15px;
+}
+
+.product-actions button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    transition: 0.3s;
+}
+
+.product-actions button:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.product-details {
+    padding: 20px 25px 30px;
+    background-color: #f6f6f6;
+    flex-grow: 1;
+}
+
+.product-category {
+    font-size: 12px;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.product-name:hover {
+    color: var(--primary-color);
+}
+
+.product-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 12px;
+}
+
+.star {
+    font-size: 14px;
+    color: #f39c8e;
+    /* Pinkish stars from image */
+}
+
+.star.filled {
+    color: #f39c8e;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: white;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.add-to-cart:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

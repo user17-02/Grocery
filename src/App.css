@@ -1,0 +1,279 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f4f6f8;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
+.hero-title span {
+  color: var(--primary-color);
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 35px;
+  max-width: 500px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.placeholder-image {
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.inner-circle {
+  width: 80%;
+  height: 80%;
+  border: 2px dashed var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Features Section */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.feature-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 32px;
+}
+
+.feature-info h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.feature-info p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Features Section Image-Specific */
+.features-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.feature-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.bg-pink {
+  background-color: #fef1f1;
+  color: #f87171;
+}
+
+.bg-green {
+  background-color: #eefaf1;
+  color: #34d399;
+}
+
+.bg-blue {
+  background-color: #f1f6ff;
+  color: #60a5fa;
+}
+
+.feature-info h4 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #888;
+}
+
+.feature-info p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .features-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+
+/* Newsletter Section Image-Specific */
+.newsletter-section {
+  background-color: #fff;
+}
+
+.newsletter-box {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-info h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.newsletter-info h3 span {
+  color: var(--primary-color);
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px 25px;
+  border: 1px solid #eee;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.btn-subscribe {
+  background-color: var(--top-bar-bg);
+  color: white;
+  padding: 0 30px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-subscribe:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .newsletter-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+}

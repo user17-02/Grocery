@@ -1,0 +1,112 @@
+.newsletter-section {
+    background-color: #f6f6f6;
+    padding: 100px 0;
+    margin: 0;
+}
+
+.newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.newsletter-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.newsletter-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.newsletter-content {
+    flex: 1.2;
+    text-align: center;
+}
+
+.newsletter-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.newsletter-subtitle .highlight {
+    color: #f39c8e;
+}
+
+.newsletter-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #222;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.newsletter-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form-inline {
+    display: flex;
+    max-width: 500px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.newsletter-input {
+    flex: 1;
+    border: none;
+    padding: 15px 25px;
+    font-size: 15px;
+    color: #666;
+    outline: none;
+    background: transparent;
+}
+
+.newsletter-submit-btn {
+    background-color: #f39c8e;
+    /* Coral color from image */
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.newsletter-submit-btn:hover {
+    background-color: #e98c81;
+}
+
+@media (max-width: 992px) {
+    .newsletter-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-content {
+        text-align: center;
+    }
+
+    .newsletter-form-inline {
+        margin: 0 auto;
+    }
+}
