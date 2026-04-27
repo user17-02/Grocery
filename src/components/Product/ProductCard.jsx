@@ -5,6 +5,8 @@ import { FiEye, FiHeart, FiRefreshCw, FiShoppingCart } from 'react-icons/fi';
 import cartApi from '../../api/cartApi';
 import wishlistApi from '../../api/wishlistApi';
 
+const BACKEND_URL = "https://farm-97ds.onrender.com";
+
 const ProductCard = ({ product }) => {
     const navigate = useNavigate();
 
@@ -69,7 +71,14 @@ const ProductCard = ({ product }) => {
             <div className="product-image-box">
                 {product.isSoldOut && <span className="soldout-badge">SOLDOUT</span>}
                 <Link to={`/product/${product._id}`}>
-                    <img src={product.image?.startsWith('http') ? product.image : `http://localhost:5000${product.image}`} alt={product.name} />
+                  <img
+  src={
+    product.image?.startsWith('http')
+      ? product.image
+      : `https://farm-97ds.onrender.com${product.image}`
+  }
+  alt={product.name}
+/>
                 </Link>
                 <div className="product-actions">
                     <button title="Quick View"><FiEye /></button>
